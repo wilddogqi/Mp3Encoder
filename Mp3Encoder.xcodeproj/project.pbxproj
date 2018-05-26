@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A77D38D20B9508100B63CA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A77D38C20B9508100B63CA3 /* AppDelegate.m */; };
-		2A77D39020B9508200B63CA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A77D38F20B9508200B63CA3 /* ViewController.m */; };
+		2A77D39020B9508200B63CA3 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A77D38F20B9508200B63CA3 /* ViewController.mm */; };
 		2A77D39320B9508200B63CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A77D39120B9508200B63CA3 /* Main.storyboard */; };
 		2A77D39520B9508300B63CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A77D39420B9508300B63CA3 /* Assets.xcassets */; };
 		2A77D39820B9508300B63CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A77D39620B9508300B63CA3 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,7 @@
 		2A77D3A320B9510B00B63CA3 /* mp3_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A77D3A120B9510B00B63CA3 /* mp3_encoder.cpp */; };
 		2A77D3AD20B9531100B63CA3 /* vocal.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 2A77D3A520B9531100B63CA3 /* vocal.pcm */; };
 		2A77D3AE20B9531100B63CA3 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77D3AC20B9531100B63CA3 /* libmp3lame.a */; };
+		2A77D3B220B95BF000B63CA3 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A77D3B120B95BF000B63CA3 /* CommonUtil.m */; };
 		442DFEE935B4D800C1CE2181 /* libPods-Mp3Encoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA263AD534FBBCEE2E4DD91D /* libPods-Mp3Encoder.a */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +26,7 @@
 		2A77D38B20B9508100B63CA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A77D38C20B9508100B63CA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2A77D38E20B9508200B63CA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2A77D38F20B9508200B63CA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A77D38F20B9508200B63CA3 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		2A77D39220B9508200B63CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A77D39420B9508300B63CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A77D39720B9508300B63CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,8 @@
 		2A77D3A520B9531100B63CA3 /* vocal.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = vocal.pcm; sourceTree = "<group>"; };
 		2A77D3AA20B9531100B63CA3 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		2A77D3AC20B9531100B63CA3 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		2A77D3B020B95BF000B63CA3 /* CommonUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		2A77D3B120B95BF000B63CA3 /* CommonUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 		765F7CA0C12A0C987C8CD76A /* Pods-Mp3Encoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mp3Encoder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mp3Encoder/Pods-Mp3Encoder.debug.xcconfig"; sourceTree = "<group>"; };
 		CA263AD534FBBCEE2E4DD91D /* libPods-Mp3Encoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mp3Encoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,12 +77,13 @@
 		2A77D38A20B9508100B63CA3 /* Mp3Encoder */ = {
 			isa = PBXGroup;
 			children = (
+				2A77D3AF20B95BD400B63CA3 /* utils */,
 				2A77D3A620B9531100B63CA3 /* 3rdparty */,
 				2A77D3A420B9531100B63CA3 /* resource */,
 				2A77D38B20B9508100B63CA3 /* AppDelegate.h */,
 				2A77D38C20B9508100B63CA3 /* AppDelegate.m */,
 				2A77D38E20B9508200B63CA3 /* ViewController.h */,
-				2A77D38F20B9508200B63CA3 /* ViewController.m */,
+				2A77D38F20B9508200B63CA3 /* ViewController.mm */,
 				2A77D3A220B9510B00B63CA3 /* mp3_encoder.h */,
 				2A77D3A120B9510B00B63CA3 /* mp3_encoder.cpp */,
 				2A77D39120B9508200B63CA3 /* Main.storyboard */,
@@ -138,6 +142,15 @@
 				2A77D3AC20B9531100B63CA3 /* libmp3lame.a */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		2A77D3AF20B95BD400B63CA3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A77D3B020B95BF000B63CA3 /* CommonUtil.h */,
+				2A77D3B120B95BF000B63CA3 /* CommonUtil.m */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		7C15BDAD11A6EDA36528CCE6 /* Frameworks */ = {
@@ -282,7 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A77D39020B9508200B63CA3 /* ViewController.m in Sources */,
+				2A77D3B220B95BF000B63CA3 /* CommonUtil.m in Sources */,
+				2A77D39020B9508200B63CA3 /* ViewController.mm in Sources */,
 				2A77D39B20B9508400B63CA3 /* main.m in Sources */,
 				2A77D38D20B9508100B63CA3 /* AppDelegate.m in Sources */,
 				2A77D3A320B9510B00B63CA3 /* mp3_encoder.cpp in Sources */,
@@ -428,10 +442,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mp3Encoder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Mp3Encoder/3rdparty/lame/lib",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Mantle\"",
+					"-DAUTO_TEST",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenqi.Mp3Encoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,10 +473,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mp3Encoder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Mp3Encoder/3rdparty/lame/lib",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Mantle\"",
+					"-DAUTO_TEST",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenqi.Mp3Encoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
